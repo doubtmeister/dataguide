@@ -1,38 +1,92 @@
-## Welcome to GitHub Pages
+# Einleitung
 
-You can use the [editor on GitHub](https://github.com/doubtmeister/dataguide/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Dieser Datenkompass richtet sich in erster Linie an Menschen, die Interesse an Datenauswertung haben, aber auf dem Gebiet epidemiologischer Daten neu sind.
+Hier soll also eine Übersicht der verfügbaren Primärquellen gegeben werden. Zudem gibt es einige Fallstricke, beispielsweise widersprüchlich
+wirkende Daten und schwammige Definitionen, die bekannt sein sollten.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Diese Seite ist ausdrücklich als Mitmach-Projekt gedacht! Es gibt zu viele "dunkle Ecken", alsdass ein Mensch jedes Detail kennen könnte.
+Daher bin ich für jede helfende Hand dankbar; mehr dazu am Ende dieser Seite.
 
-### Markdown
+***Dies ist nur ein Grundgerüst. Der Inhalt folgt nach und nach...***
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# Primärquellen
 
-```markdown
-Syntax highlighted code block
+Das Wichtigste zuerst: Die Primärquellen, die uns in Deutschland zur Verfügung stehen.
 
-# Header 1
-## Header 2
-### Header 3
+Zu vielen Datensätzen gibt es weitergehende Anmerkungen, die entsprechend verlinkt sind.
 
-- Bulleted
-- List
+## Robert-Koch-Institut (RKI)
 
-1. Numbered
-2. List
+Die Gesamtübersicht aller Informationen zu Corona findet sich [hier](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html).
+
+Zudem gibt es ein Daten-Dashboard unter https://corona.rki.de/ (teils hilfreiche Beschreibungen!)
+
+### Berichte
+
+Das RKI veröffentlicht tage- und wochenweise diverse Berichte.
+Übersichtsseite: https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Gesamt.html
+
+- Situationsbericht (täglich)
+- Trends (täglich)
+- Omikron-Fälle (täglich)
+- Wochenbericht
+
+### Verarbeitungsfähige Daten
+
+Daten, die man tatsächlich selbst auswerten kann, finden sich hier:
+
+#### Github
+
+Das [Github Repository des RKI](https://github.com/robert-koch-institut) bietet neben den Datensätzen auch sehr ausführliche
+Beschreibungen der Daten, die hilfreich zum Verstehen der Meldewege und Aufbereitungen sind. Die meisten Datensätze liegen als CSV vor.
+
+- Impfungen (diese Daten zeigt auch das https://impfdashboard.de des Gesundheitsministeriums)
+  - Zeitreihe nach Bundesland (Impfstoff, Impfserie)
+  - Zeitreihe nach Landkreis (mit Altersgruppen!)
+  - Übersicht der Impfquoten
+- Sequenz- und zugehörige Metadaten
+- Hospitalisierungen
+  - Zeitreihe nach Bundesland, Altersgruppe, Fallzahlen und *aktualisierter* Inzidenz
+  - Zeitreihe nach Bundesland, Altersgruppe und diversen Werten zu Inzidenzen (fixiert, aktualisiert, adjustiert; dazu siehe unten)
+- Infektionen: Zeitreihe nach Landkreis, Altersgruppe mit Werten zur Anzahl Fälle / Todesfälle / Genesene (Achtung: "große" Datei)
+
+#### Sonstige Datensammlungen
+
+Mundgerecht als Excel:
+- Impfdaten (täglich), verlinkt auf der [Übersicht zum Impfquotenmonitoring](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquoten-Tab.html)
+- tägliche oder wöchentliche Aufbereitung der o.a. Daten als Excel, Liste hier unter [Daten zum Download](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html#doc13490882bodyText12); außerdem erwähnenswert:
+  - Fälle nach Zuordnung zu Ausbrüchen (Cluster von >=2 Fällen) *TODO*
+  - Todesfälle nach Sterbedatum und 10er-Altersgruppen (feinere Abstufung als im Infektionsdatensatz)
+  - oft sind zusätzliche Informationen enthalten (z.B. Anteil mit Angabe zu Symptomen etc.)
+  - Nowcasting / Schätzung von *R*
+  - Testzahlen
+  - Varianten
+  - *TODO* (alle mal sichten)
 
 
-**Bold** and _Italic_ and `Code` text
+## DIVI e.V.
+...
 
-[Link](url) and ![Image](src)
-```
+## Statistisches Bundesamt (destatis)
+...
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+## Paul-Ehrlich-Institut (PEI)
+...
 
-### Jekyll Themes
+## Institut für das Entgeltsystem im Krankenhaus (InEK)
+...
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/doubtmeister/dataguide/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+# Grundsätzliches
 
-### Support or Contact
+## Definitionen
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+(Fälle, Inzidenz, Impfstatus, Nachmeldungen, unterschiedliche Hosp'inzidenzen, ...)
+
+# Automatisierung
+...
+
+# Kontakt & Feedback
+
+Direkt über die Github-Seite können *Issues* und *Pull requests* geöffnet werden.
+
+Ansonsten gerne [bei Twitter](https://twitter.com/doubtmeister) anschreiben; DMs sind offen.
